@@ -1,0 +1,256 @@
+* {
+  padding-top: 10px;
+  box-sizing: border-box;
+}
+
+#pop-up {
+  justify-content: center;
+  width: 50%;
+  height: 40%;
+  z-index: 5;
+  outline: 10px;
+  border-radius: 14px;
+  font-size: 2rem;
+  box-shadow: inset 0 0 0 0 #464646;
+  transition: ease-in-out 220ms;
+  border: none;
+}
+#pop-up:hover {
+  box-shadow: inset 1000px 0 0 0 #464646;
+  color: white;
+  font-size: 0;
+}
+#pop-up:hover:after {
+  content: attr(data-hover);
+  font-size: 70px;
+  color: white;
+}
+#pop {
+  padding-bottom: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+body {
+  text-align: center;
+  background-color: linear-gradiant(120deg, #b0e8f5,#dcb0f5);
+  font-family: 'Montserrat', sans-serif;
+}
+h2 {
+  color: #787878;
+}
+
+.body {
+  width: 60%;
+  margin: auto;
+  height: 100%;
+}
+
+#inputField {
+  height: 50px;
+  border-top-style: hidden;
+  border-left-style: hidden;
+  border-right-style: hidden;
+  border-bottom-style: groove;
+  background-color: none;
+}
+
+#inputField:focus {
+  outline: none;
+}
+#addToDo {
+  border-top-style: hidden;
+  border-left-style: hidden;
+  border-right-style: hidden;
+  border-bottom-style: hidden;
+  background-color: white;
+  transform: scale(1);
+  z-index: 2;
+  opacity: 100%;
+}
+#inputContainer {
+  height: 740px;
+  position: relative;
+  width: 50px;
+  justify-content: center;
+}
+#box {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 180px;
+  justify-content: center;
+  margin: auto;
+  height: 100%;
+}
+#boxes {
+  width: 17.5px;
+  height: 740px;
+  position: absolute;
+  left: 873px;
+  top: 257px;
+}
+#important {
+  position: fixed;
+  top: 80px;
+  left: 850px;
+  transform: scale(0.5);
+  padding-top: 0;
+  margin: 0;
+  height: 740px;
+  width: 20px;
+}
+.liDiv {
+  display: flex;
+
+}
+.position {
+  margin-left: 1rem;
+  padding-top: 0;
+  max-height: 21.555px;
+  overflow: hidden;
+  margin-left: 3rem;
+  margin-bottom: 0;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+.position.bold {
+  font-weight: bold;
+}
+.position1 {
+  justify-content: flex-start;
+  transform: scale(1);
+  padding-bottom: 100px;
+  margin-bottom: 100px;
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+.position.complete {
+opacity: 0;
+}
+.position.complete2 {
+  display: none;
+}
+.position1.complete {
+opacity: 0;
+}
+.position1.complete2 {
+  display: none;
+}
+
+.menuParent {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+#completedmenu {
+  height: 100%;
+  position: absolute;
+  width: 0;
+  top: 0;
+  background-color: #58CA9C;
+  color: white;
+  transition-duration: 600ms;
+  padding: 0;
+}
+#completedmenu.right {
+ float: right;
+}
+#completedmenu.active {
+  width: 25%;
+}
+#completedContent {
+  opacity: 0;
+  transition-duration: 1000ms;
+}
+#completedContent.right {
+ float: right;
+}
+#completedContent.active {
+  opacity: 1;
+}
+#importantMenu {
+  height: 100%;
+  position: absolute;
+  width: 0;
+  top: 0;
+  right: 0;
+  background-color: #58CA9C;
+  color: white;
+  transition-duration: 600ms;
+  padding: 0;
+}
+#importantMenu.active {
+  width: 25%;
+}
+#importantContent {
+  opacity: 0;
+  transition-duration: 1000ms;
+}
+#importantContent.active {
+  opacity: 1;
+}
+#cat {
+  justify-content:center;
+  transform: scale(3rem);
+}
+.fa-solid {
+  transform: scale(2.5);
+  color: #A0FFBE;
+  z-index: 1;
+  box-shadow: inset 0 0 0 0 #56DDA6;
+  transition: ease-in-out 550ms;
+  border-radius: 3px;
+  padding-top: 0;
+}
+.fa-solid:hover {
+  box-shadow: inset 30px 0 0 0 #56DDA6;
+  color: white;
+}
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 3rem;
+  width: 14rem;
+  height: 6rem;
+  background-color: #464646;
+  color: #F7F7F7;
+  border: 1px solid #aaa;
+  box-shadow: 2px 2px 2px #999;
+  border-radius: 1rem;
+  list-style: none;
+  position: fixed;
+}
+.menu.off {
+  top: -200%;
+  left: -200%;
+  visibility: hidden;
+  transform:scale(0);
+}
+.menu.active {
+  transform: scale(1);
+  transition: transform 90ms ease-in-out;
+  z-index: 100;
+}
+.menu-item {
+  display: flex;
+  justify-content: center;
+  height: 1.7rem;
+  line-height: 0;
+  font-size: 1.5rem;
+  padding: 0;
+  cursor: pointer;
+}
+.menu-item:hover,
+.manu-item:active {
+  color: #A0FFBE;
+  font-weight: 500;
+}
